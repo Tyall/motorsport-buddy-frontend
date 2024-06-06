@@ -1,0 +1,51 @@
+html {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  width: 100%;
+  margin: 0;
+}
+
+.body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 22px;
+  line-height: 2.35;
+}
+
+.bggradient {
+  padding-top: 80px;
+  z-index: 1;
+  background: linear-gradient(-45deg, #dee4ea, #fffcf9);
+  background-size: 400% 400%;
+  width: 100%;
+  animation: animate 15s ease infinite;
+}
+
+@keyframes animate {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+router-outlet + * {
+  display: block;
+  animation: fade 2s;
+}
