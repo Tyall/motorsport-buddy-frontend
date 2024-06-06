@@ -1,0 +1,48 @@
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css"
+/>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.0.0/css/flag-icons.min.css"
+/>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.bundle.min.js"></script>
+<div class="container">
+  <div class="timeline">
+    <div class="timeline-row" id="start">
+      <div class="timeline-content">
+        <a class="weekend-buttons" href="/race-calendar#{{jumpTo}}">Jump to the next race</a>
+      </div>
+    </div>
+
+    <div *ngFor="let race of raceEntries" class="timeline-row" id="{{ race.country }}">
+        <div class="timeline-time">
+          {{ race.date | date : "dd MMM" }} -
+          {{ race.dateEnd | date : "dd MMM" }}
+        </div>
+        <div class="timeline-content">
+          <i class="icon-attachment"></i>
+          <h4>
+            {{ race.country }}
+            <span class="fi fi-{{ race.countryIsoCode }}"></span>
+          </h4>
+          <p>{{ race.eventName }}</p>
+          <img
+            class="img-fluid rounded"
+            src="{{ race.trackImgUrl }}"
+            alt="Track Layout"
+          />
+          <div>
+            <span class="weekend-buttons">Weekend details</span>
+            <span class="weekend-buttons">Results</span>
+          </div>
+        </div>
+    </div>
+
+    <div class="timeline-row" id="end">
+      <div class="timeline-content">
+        <a class="weekend-buttons" href="/race-calendar#start">Back to the beginning</a>
+      </div>
+    </div>
+  </div>
+</div>

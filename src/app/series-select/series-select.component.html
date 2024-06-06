@@ -1,0 +1,53 @@
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+/>
+<link
+  rel="stylesheet"
+  href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+/>
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin"
+/>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<section id="team" class="team-area section-padding">
+  <div class="container">
+    <div class="section-title text-center title-text">
+      <h2>Motorsport Buddy</h2>
+      <p>
+        Everything you need to know as a motorsport fan combined into one web
+        application
+      </p>
+    </div>
+    <div class="row">
+      <div
+        *ngFor="let series of seriesInfo"
+        class="col-lg-3 col-sm-6 col-xs-12 wow fadeInUp"
+        data-wow-duration="1s"
+        data-wow-delay="0.2s"
+        data-wow-offset="0"
+        style="
+          visibility: visible;
+          animation-duration: 1s;
+          animation-delay: 0.2s;
+          animation-name: fadeInUp;
+        "
+        [routerLink]="['/race-calendar']"
+        routerLinkActive="active"
+      >
+        <div class="our-team">
+          <img src="{{series.logoUrl}}" alt="{{series.codename}}" />
+          <div class="team-content">
+            <h3 class="title">{{series.name}}</h3>
+            <span class="post">{{series.slogan}}</span><br />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--- END ROW -->
+  </div>
+  <!--- END CONTAINER -->
+</section>
