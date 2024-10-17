@@ -5,7 +5,7 @@ A personal project made mostly for fun and learning purposes.
 Its goal is to aggregate lots of useful informations about racing series.
 The app should display most crucial information like racing calendar, teams, drivers, tracks and statistics for chosen racing series.
 Currently the data is supplied from the local database but there's a plan to use live API to always get up to date data.
-Its front-end part is written in Angular 17. To read more about the back-end part click here -> [Motorsport Buddy Backend(WIP)](https://github.com/Tyall/motorsport-buddy)
+Its front-end part is written in Angular 17. To read more about the back-end part click here -> [Motorsport Buddy Backend (WIP)](https://github.com/Tyall/motorsport-buddy)
 
 ## Presentation
 
@@ -13,6 +13,9 @@ Its front-end part is written in Angular 17. To read more about the back-end par
 
 ## Technologies
 * Angular 17
+* HTML
+* CSS
+* Bootstrap
   
 ## Installation
 
